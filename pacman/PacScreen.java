@@ -49,8 +49,8 @@ public class PacScreen extends JFrame implements Runnable {
 	Pacman pac;
 	
 	//path to the images
-	final String IMAGESOURCE = "src/images/";
-	final String SOUNDSOURCE = "src/sound/";
+	final String IMAGESOURCE = "images/";
+	final String SOUNDSOURCE = "sound/";
 	
 	//sounds
 	final String PELLET = SOUNDSOURCE + "pellet.wav";

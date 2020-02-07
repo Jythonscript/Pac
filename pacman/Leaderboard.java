@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Leaderboard {
 	
-	final String SOURCE = "src/pacman/";
+	final String SOURCE = "pacman/";
 
 	private ArrayList<Leader> leaders;
 	

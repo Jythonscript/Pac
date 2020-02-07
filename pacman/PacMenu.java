@@ -453,15 +453,17 @@ public class PacMenu extends JFrame implements Runnable {
 		
 		//prints small 2d array
 		g.setColor(Color.black);
-		g.fillRect(150, 50, BLOCKWIDTH * preview.maze.length, BLOCKWIDTH * preview.maze[0].length );
+
+		if (preview != null) {
+			g.fillRect(150, 50, BLOCKWIDTH * preview.maze.length, BLOCKWIDTH * preview.maze[0].length );
 		for (int r = 0; r < preview.maze.length; r++) {
 			for (int c = 0; c < preview.maze[0].length; c++) {
-				
+
 				int xloc = 150 + r * BLOCKWIDTH;
 				int yloc = 50 + c * BLOCKWIDTH;
-				
+
 				int state = preview.maze[r][c].getState();
-				
+
 				if (state == Tile.WALL) {
 					g.setColor(Color.blue);
 					g.fillRect(xloc, yloc, BLOCKWIDTH, BLOCKWIDTH);
@@ -473,7 +475,7 @@ public class PacMenu extends JFrame implements Runnable {
 				else if (state == Tile.PILL) {
 					g.setColor(Color.white);
 					g.fillOval(xloc + BLOCKWIDTH * 3 /7,
-					yloc + BLOCKWIDTH * 3 / 7, BLOCKWIDTH / 4, BLOCKWIDTH / 4);
+							yloc + BLOCKWIDTH * 3 / 7, BLOCKWIDTH / 4, BLOCKWIDTH / 4);
 				}
 				else if (state == Tile.SPAWN) {
 					g.setColor(Color.green);
@@ -498,13 +500,14 @@ public class PacMenu extends JFrame implements Runnable {
 				else if (state == Tile.POWERPELLET) {
 					g.setColor(Color.white);
 					g.fillOval(xloc + BLOCKWIDTH / 4,
-					yloc + BLOCKWIDTH / 4, BLOCKWIDTH / 2, BLOCKWIDTH / 2);
+							yloc + BLOCKWIDTH / 4, BLOCKWIDTH / 2, BLOCKWIDTH / 2);
 				}
-				
+
 				g.setColor(Color.blue);
 				g.drawRect(xloc, yloc, BLOCKWIDTH, BLOCKWIDTH);
-				
+
 			}
+		}
 		}
 		
 		//prints the leaderboard
