@@ -1,4 +1,4 @@
-# Pac-Man
+# Pac
 This program is based off the classic game pac-man
 
 ## To Compile
